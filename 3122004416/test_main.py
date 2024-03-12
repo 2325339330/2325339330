@@ -31,11 +31,11 @@ class TestPlagiarismDetector(unittest.TestCase):
 
     def test_calculate_similarity(self):
         # 测试 calculate_similarity 方法是否能正确计算相似度
-        with open("3122004416\orig.txt", "r", encoding='utf-8') as file:
+        with open("orig.txt", "r", encoding='utf-8') as file:
             original_text = file.read()
-        with open("3122004416\orig_0.8_del.txt", "r", encoding='utf-8') as file:
+        with open("orig_0.8_del.txt", "r", encoding='utf-8') as file:
             copied_text1 = file.read()
-        with open("3122004416\orig_0.8_dis_1.txt", "r", encoding='utf-8') as file:
+        with open("orig_0.8_dis_1.txt", "r", encoding='utf-8') as file:
             copied_text2 = file.read()
         copied_texts = [copied_text1,copied_text2]
         expected_jaccard_similarity = [0.5715093273035613, 0.8256315465187923]
